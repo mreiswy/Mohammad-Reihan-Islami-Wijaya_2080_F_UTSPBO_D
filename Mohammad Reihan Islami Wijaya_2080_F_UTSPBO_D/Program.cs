@@ -1,10 +1,11 @@
 ﻿namespace Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D
 {
-    internal class Program
+    class Program
     {
         public static void Main(string[] args)
         {
-            PesananMakanan pesanan1 = new PesananMakanan("Rini", "M05", "Ayam Bakar");
+            PaketHemat pesanan1 = new PaketHemat("Rini", "M05", "Ayam Bakar", 19000);
+            Console.WriteLine("Pemesan: " + pesanan1.Nama + " | " + "Meja: " + pesanan1.Nomormeja + " | " + "Menu: " + pesanan1.MenuUtama);
             string Nama = "Rini";
             string Nomormeja = "M05";
             string MenuUtama = "Ayam Bakar";

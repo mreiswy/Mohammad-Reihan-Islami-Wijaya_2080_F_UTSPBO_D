@@ -8,6 +8,11 @@ namespace Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D
     {
         public int hargaPerPorsi { get; set; }
 
+        PaketHemat(string namaPemesan, string nomorMeja, string menuUtama, int hargaPerPorsi)
+        {
+            setPesanan(namaPemesan, nomorMeja, menuUtama, 1);
+            this.hargaPerPorsi = hargaPerPorsi;
+        }
         public override void tampilInfo()
         {
             base.tampilInfo();

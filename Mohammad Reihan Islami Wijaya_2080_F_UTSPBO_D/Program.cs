@@ -4,7 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            PaketHemat pesanan1 = new PaketHemat();
+            PesananMakanan pesanan1 = new PesananMakanan("Rini", "M05", "Ayam Bakar");
             string Nama = "Rini";
             string Nomormeja = "M05";
             string MenuUtama = "Ayam Bakar";

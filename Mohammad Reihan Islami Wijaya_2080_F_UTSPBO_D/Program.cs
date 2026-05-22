@@ -4,7 +4,12 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine();
+            string Nama = "Rini";
+            string Nomormeja = "M05";
+            string MenuUtama = "Ayam Bakar";
+            Console.WriteLine("Pemesan:" + Nama + " | " + "Meja:" + Nomormeja + " | " + "Menu:" + MenuUtama);
+            Console.WriteLine("Total Bill: " + "Rp " + 19000);
+            Console.WriteLine("1. Prasmanan | 5 Porsi | 22-05-2026");
         }
         public void pemesanan(PesananMakanan pesanan)
         {

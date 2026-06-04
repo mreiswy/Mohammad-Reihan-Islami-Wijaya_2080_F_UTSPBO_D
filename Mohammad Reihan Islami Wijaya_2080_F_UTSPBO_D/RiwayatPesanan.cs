@@ -12,7 +12,9 @@ namespace Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D
             public int JumlahPorsi { get; set; }
             public string TanggalPesan { get; set; }
         }
+
         private List<DataRiwayat> daftarRiwayat = new List<DataRiwayat>();
+
         public void tambahPesanan(string kategori, int porsi, string tanggal)
         {
             daftarRiwayat.Add(new DataRiwayat
@@ -22,16 +24,15 @@ namespace Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D
                 TanggalPesan = tanggal
             });
         }
+
         public void cetakRiwayat()
         {
-            Console.WriteLine("====== RIWAYAT TRANSAKSI OOPFOOD ======");
             int no = 1;
             foreach (var riwayat in daftarRiwayat)
             {
-                Console.WriteLine($"{no}. [{riwayat.TanggalPesan}] {riwayat.KategoriPaket} - {riwayat.JumlahPorsi} Porsi");
+                Console.WriteLine($"{no}. {riwayat.KategoriPaket} | {riwayat.JumlahPorsi} porsi | {riwayat.TanggalPesan}");
                 no++;
             }
-            Console.WriteLine("=======================================");
         }
     }
 }

@@ -26,9 +26,7 @@ namespace Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D
 
         public virtual void tampilInfo()
         {
-            Console.WriteLine($"Nama Pemesan : {namaPemesan}");
-            Console.WriteLine($"Nomor Meja   : {nomorMeja}");
-            Console.WriteLine($"Menu Utama   : {menuUtama}");
+            Console.WriteLine($"Pemesan : {namaPemesan} | Meja: {nomorMeja} | Menu: {menuUtama}");
         }
     }
 }

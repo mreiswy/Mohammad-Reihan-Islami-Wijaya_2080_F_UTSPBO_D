@@ -1,4 +1,4 @@
-﻿using Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D;
+﻿using System;
 
 namespace Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D
 {
@@ -8,13 +8,9 @@ namespace Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D
         {
             RiwayatPesanan riwayatSistem = new RiwayatPesanan();
 
-            PaketHemat pesanan1 = new PaketHemat("Andi", "A-12", "Nasi Ayam Goreng", 2, 25000);
+            PaketPrasmanan pesanan1 = new PaketPrasmanan("Rini", "M05", "Ayam Bakar", 5, 15000, 115000);
             pesanan1.tampilInfo();
-            riwayatSistem.tambahPesanan("Paket Hemat", pesanan1.jumlahPorsi, "20-10-2023");
-
-            PaketPrasmanan pesanan2 = new PaketPrasmanan("Budi", "VIP-1", "Buffet Seafood", 15, 75000, 150000);
-            pesanan2.tampilInfo();
-            riwayatSistem.tambahPesanan("Paket Prasmanan", pesanan2.jumlahPorsi, "20-10-2023");
+            riwayatSistem.tambahPesanan("Prasmanan", pesanan1.jumlahPorsi, "13-10-2025");
 
             riwayatSistem.cetakRiwayat();
         }

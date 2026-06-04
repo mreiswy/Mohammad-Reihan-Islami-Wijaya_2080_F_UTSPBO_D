@@ -1,17 +1,22 @@
-﻿namespace Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D
+﻿using Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D;
+
+namespace Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            PaketHemat pesanan1 = new PaketHemat("Rini", "M05", "Ayam Bakar", 19000);
-            Console.WriteLine("Pemesan: " + pesanan1.Nama + " | " + "Meja: " + pesanan1.Nomormeja + " | " + "Menu: " + pesanan1.MenuUtama);
-            string Nama = "Rini";
-            string Nomormeja = "M05";
-            string MenuUtama = "Ayam Bakar";
-            Console.WriteLine("Pemesan:" + Nama + " | " + "Meja:" + Nomormeja + " | " + "Menu:" + MenuUtama);
-            Console.WriteLine("Total Bill: " + "Rp " + 19000);
-            Console.WriteLine("1. Prasmanan | 5 Porsi | 22-05-2026");
+            RiwayatPesanan riwayatSistem = new RiwayatPesanan();
+
+            PaketHemat pesanan1 = new PaketHemat("Andi", "A-12", "Nasi Ayam Goreng", 2, 25000);
+            pesanan1.tampilInfo();
+            riwayatSistem.tambahPesanan("Paket Hemat", pesanan1.jumlahPorsi, "20-10-2023");
+
+            PaketPrasmanan pesanan2 = new PaketPrasmanan("Budi", "VIP-1", "Buffet Seafood", 15, 75000, 150000);
+            pesanan2.tampilInfo();
+            riwayatSistem.tambahPesanan("Paket Prasmanan", pesanan2.jumlahPorsi, "20-10-2023");
+
+            riwayatSistem.cetakRiwayat();
         }
     }
 }

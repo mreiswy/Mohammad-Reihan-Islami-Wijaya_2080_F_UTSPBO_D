@@ -5,28 +5,30 @@ using System.Text;
 
 namespace Mohammad_Reihan_Islami_Wijaya_2080_F_UTSPBO_D
 {
-    abstract class PesananMakanan
+    public abstract class PesananMakanan
     {
-        protected int jumlahPorsi { get; set; }
+        private string namaPemesan;
+        private string nomorMeja;
+        private string menuUtama;
 
-        private string namaPemesan { get; set; }
-        private string nomorMeja { get; set; }
-        private string menuUtama { get; set; }
-        public void setPesanan(string namaPemesan, string nomorMeja, string menuUtama, int jumlahPorsi)
+        public string NamaPemesan { get => namaPemesan; set => namaPemesan = value; }
+        public string NomorMeja { get => nomorMeja; set => nomorMeja = value; }
+        public string MenuUtama { get => menuUtama; set => menuUtama = value; }
+
+        public PesananMakanan(string nama, string meja, string menu)
         {
-            this.namaPemesan = namaPemesan;
-            this.nomorMeja = nomorMeja;
-            this.menuUtama = menuUtama;
-            this.jumlahPorsi = jumlahPorsi;
+            this.namaPemesan = nama;
+            this.nomorMeja = meja;
+            this.menuUtama = menu;
         }
+
+        public abstract double hitungTotalBill();
+
         public virtual void tampilInfo()
         {
-                Console.WriteLine("Pemesan: " + namaPemesan);
-                Console.WriteLine("Meja: " + nomorMeja);
-                Console.WriteLine("Menu: " + menuUtama);
+            Console.WriteLine($"Nama Pemesan : {namaPemesan}");
+            Console.WriteLine($"Nomor Meja   : {nomorMeja}");
+            Console.WriteLine($"Menu Utama   : {menuUtama}");
         }
-    public abstract void hitungTotalBill();
-        PaketHemat paketHemat = new PaketHemat();
-        PaketPrasmanan paketPrasmanan = new PaketPrasmanan();
     }
 }
